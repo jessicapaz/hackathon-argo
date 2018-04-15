@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+<html>
+    <head>
+
+    </head>
+    <body>
+    {% block content %}
+        {% for book in books %}
+        <p>{{ book.title }}</p>
+        <img src="{{ book.image.url }}" alt="" />
+        {% endfor %}
+    {% endblock %}
+    </body>
+</html>
